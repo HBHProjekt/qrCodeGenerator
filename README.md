@@ -1,6 +1,7 @@
 # QR Code Generator
 
-A simple, yet powerful web-based QR code generator with customization options. This tool allows you to create QR codes for any URL with various customization options.
+A simple, yet powerful web-based QR code generator with customization options. This tool allows you to create QR codes for any URL with various customization options. 
+
 
 ## Features
 
