@@ -14,6 +14,42 @@
             <input type="text" id="url-input" placeholder="Enter URL here...">
             <button id="generate-btn">Generate QR Code</button>
         </div>
+        
+        <div class="settings">
+            <h2>QR Code Settings</h2>
+            <div class="setting-group">
+                <label for="size">Size (pixels):</label>
+                <input type="range" id="size" min="100" max="400" value="200">
+                <span id="size-value">200</span>
+            </div>
+            
+            <div class="setting-group">
+                <label for="error-level">Error Correction:</label>
+                <select id="error-level">
+                    <option value="L">Low (7%)</option>
+                    <option value="M" selected>Medium (15%)</option>
+                    <option value="Q">Quartile (25%)</option>
+                    <option value="H">High (30%)</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label for="dark-color">Dark Color:</label>
+                <input type="color" id="dark-color" value="#000000">
+            </div>
+
+            <div class="setting-group">
+                <label for="light-color">Light Color:</label>
+                <input type="color" id="light-color" value="#ffffff">
+            </div>
+
+            <div class="setting-group">
+                <label for="margin">Margin:</label>
+                <input type="range" id="margin" min="0" max="10" value="1">
+                <span id="margin-value">1</span>
+            </div>
+        </div>
+
         <div id="qrcode-container">
             <canvas id="qrcode"></canvas>
         </div>
