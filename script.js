@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlInput = document.getElementById('url-input');
     const generateBtn = document.getElementById('generate-btn');
-    const qrcodeDiv = document.getElementById('qrcode');
+    const qrcodeCanvas = document.getElementById('qrcode');
 
     generateBtn.addEventListener('click', () => {
         const url = urlInput.value.trim();
@@ -11,11 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Clear previous QR code
-        qrcodeDiv.innerHTML = '';
-
         // Generate new QR code
-        QRCode.toCanvas(qrcodeDiv, url, {
+        QRCode.toCanvas(qrcodeCanvas, url, {
             width: 200,
             margin: 1,
             color: {
